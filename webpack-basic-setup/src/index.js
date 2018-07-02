@@ -1,3 +1,4 @@
+
 import "./scss/main.scss";
 import "./pageTwo.html";
 import "jquery";
@@ -6,3 +7,4 @@ $('.btnPro').click(function(){
  $('.navRow  > ul').toggleClass('open')
 // alert('jque')
 })
+
