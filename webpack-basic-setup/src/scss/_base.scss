@@ -1,0 +1,254 @@
+/*RESET*/
+*{
+    box-sizing: border-box;
+}
+
+body,html,ul,li{
+    margin:0;
+    padding:0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin:0.1em;
+}
+ul{
+    list-style: none;
+}
+
+/*MAIN*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:200i,300,300i,400,400i,500,500i,600,600i,700);
+
+body{
+    display:flex;
+    flex-direction: column;
+    font-family:'Montserrat',sans-serif;
+
+
+}
+.centeredContent{
+    width:var(--centered-width);
+   }
+.btn {
+    color: #fff;
+    background: #2ecc71;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 12rem;
+    text-transform: uppercase;
+    border: none;
+}
+.btnPro{
+    background:#f39c12;
+}
+/*VARIABLES*/
+:root{
+    --centered-width:80%;
+    --featuredItemRowDirection:column;
+    --navRowDirection:column;
+    --navAlignItems:flex-start;
+
+}
+
+
+/*NAV*/
+.navRow{
+    display: flex;
+    font-size: 1.5em;
+    ul {
+        display: flex;
+        width: 100%;
+        height:0;
+        // border: 1px solid pink;
+        justify-content: space-around;
+        align-items:var(--navAlignItems);
+        flex-direction: var(--navRowDirection);
+        clip-path: circle(0px);
+        transition: all 3s;
+        li {
+            flex: 1;
+            padding: 1em;
+        }
+        #navLogo {
+            flex: 4;
+            font-weight: bold;
+            display:flex;
+            flex-direction: row;
+            font-size: 1.3em;
+            margin: .2em;
+            align-items: flex-start;
+            span{
+                margin-left: 10px;
+
+            }
+        }
+    }
+
+}
+
+
+/*HERO*/
+.heroRow{
+    // border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #2c3e50;
+    color: #fff;
+    padding: 2em;
+    align-items: center;
+    height: 300px;
+    justify-content: center;
+    h1{
+        text-transform: uppercase;
+    }
+}
+
+/*BUTTONROW*/
+
+.buttonRow{
+    display: flex;
+    width: 32%;
+    justify-content: space-around;
+}
+
+/*EMAIL*/
+.emailRow{
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid black;
+    align-items: center;
+    background: #2ecc71;
+    background-image: url('../img/sanfransiscoGreen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2em;
+    color:#fff;
+    h1{
+        padding:1em;
+    }
+    input[type='text']{
+        flex: 8;
+        text-align: center;
+        padding: 1.2em;
+        border: none;
+    }
+    .btn{
+       
+        flex: 2;
+        padding: 1rem;
+        font-weight: bold;
+        background: #f39c12;
+        color: #fff;
+    }
+}
+
+.emailForm{
+    display: flex;
+    width: 100%;
+}
+
+
+/*FEATURES*/
+.featureRow{
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+.featuredItemRow{
+    display: flex;
+    // flex: 1;
+    // border: 1px solid green;
+    //below controls flex direct for mobile and desktop
+    flex-direction: var(--featuredItemRowDirection);
+   
+}
+.featuredItemRowBox{
+    // border: 2px solid red;
+    // display: flex;
+    // flex-direction: column;
+    flex: 1;
+    text-align: center;
+    margin: 1em;
+    img{
+        width:100%;
+        height:auto;
+    }
+}
+
+/*CTA*/
+.premiumRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2c3e50;
+    padding: 4em;
+    text-align: center;
+    color:#fff;
+    text-transform:uppercase;
+    background-image: url('../img/NYCBlue.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2em;
+    h1{
+        padding:1em;
+    }
+
+}
+
+/*FOOTER*/
+.socialRow{
+    display:flex;
+    justify-content: center;
+    padding:2em;
+    ul{
+        display: flex;
+        justify-content: space-around;
+        width:100%;
+        li{
+           
+        background: #2c3e50;
+        border-radius: 100%;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-align: center;
+        height: 50px;
+        width: 50px;
+        padding-top: 10px;
+        }
+    }
+}
+
+/*OTHER*/
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
+
+
+  @media(min-width:1600px){
+    :root{
+        --centered-width:40%;
+        --featuredItemRowDirection:row;
+        --navRowDirection:row;
+        --navAlignItems:center;
+ 
+    }
+    .featuredItemRow:first-child{
+     flex-direction: row-reverse;
+  }
+  .navRow ul{
+      height:auto;
+  }
+ } 
+
+ .open{
+    clip-path: circle(150%)!important;
+    height: auto!important;
+}
